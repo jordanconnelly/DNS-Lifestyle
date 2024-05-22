@@ -11,12 +11,11 @@ In this tutorial, we will use the Active Directory (https://github.com/jordancon
 
 - Microsoft Azure (Virtual Machines)
 - Remote Desktop
-- Various Command-Line Tools
+- Command Prompt Tools
 
 <h2>Operating Systems Used </h2>
 
 - Windows 10 (21H2)
-- Ubuntu Server 20.04
 
 <h2>High-Level Steps</h2>
 
@@ -83,5 +82,26 @@ In order to get the updated IP Address for "mainframe" we will flush the DNS Cac
 Now we can type (ping mainframe) in Command Prompt again to observe the updated IP Address (8.8.8.8) that was received from the DNS Server (DC-1).
 <p>
 <img src="https://imgur.com/tP5tFs1.png">
+</p>
+<br />
+<h2>CNAME Record Exercise</h2>
+</p>
+As opposed to an A-Record that maps a domain to an IP Address, CNAME Records are used to alias one domain to another.
+<p>
+For this exercise we will create a CNAME Record that matches the name "search" to "www.google.com". 
+<p></p>
+First we will go back to DC-1 and attempt to ping the domain "search" in the Command Prompt. This ping request will fail because neither Client-1 nor the DNS Server has information for that domain. 
+<p>
+<img src="https://imgur.com/QRN7Pmi.png">
+</p>
+<br />
+Open DNS Manager again and create a new CNAME by right-clicking in the blank space and selecting "New Alias (CNAME)...". Type "search" as the Alias Name and "www.google.com" as the FQDN, click OK.
+<p>
+<img src="https://imgur.com/ugqsqlx.png">
+</p>
+<br />
+Go back to Client-1, open the Command Prompt, and ping "search" again. This will now successfully resolve to "www.google.com"
+<p>
+<img src="https://imgur.com/ak1G0UC.png">
 </p>
 <br />
