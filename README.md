@@ -3,7 +3,7 @@
 </p>
 
 <h1>DNS Records</h1>
-In this tutorial, we create and observe (A) and CNAME records. <br />
+In this tutorial, we will use the Active Directory we created to observe DNS A-records and CNAME's. <br />
 
 
 
