@@ -3,7 +3,7 @@
 </p>
 
 <h1>DNS Records</h1>
-In this tutorial, we will use the [Active Directory](https://github.com/jordanconnelly/configure-ad) we created to observe DNS A-records and CNAME's. <br />
+In this tutorial, we will use the Active Directory (https://github.com/jordanconnelly/configure-ad) we created to observe DNS A-records and CNAME's. <br />
 
 
 
@@ -27,6 +27,8 @@ In this tutorial, we will use the [Active Directory](https://github.com/jordanco
 <h2>A-Record Exercise</h2>
 </p>
 <br />
-
+First we will login to both DC-1 and Client-1 as the Domain Admin (jordan_admin). In Client-1 open the Command Prompt (Start>cmd>Enter). We will try to ping a computer named "mainframe", since it does not exist yet it will fail.
+<p>
+<img src="https://imgur.com/v6Aij8W.png">
 
 
