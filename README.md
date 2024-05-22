@@ -46,3 +46,20 @@ This shows the list of A-Records this computer currently knows.
 <img src="https://imgur.com/Un9G8Wz.png">
 </p>
 <br />
+To manually create a new A-record, right-click in the blank space and select "New Host". Type in the name (mainframe) and add an IP address. The IP address could be anything, but because we want to ping "mainframe" we will use DC-1's IP address(10.0.0.4). Click "Add Host". The mainframe A-record has now been successfully created.
+<p>
+<img src="https://imgur.com/tGtR3H4.png">
+</p>
+<br />
+Go back to the Client-1 VM to ping "mainframe" again. Type "ping mainframe" in cmd again and hit Enter. Since there is now an A-record for "mainframe" we will see replies from the IP address we assigned to it(10.0.0.4).
+<p>
+<img src="https://imgur.com/lIHiaXZ.png">
+</p>
+<br />
+We can also take a look at the DNS Cache that the Client-1 VM currently knows, this is what we will be working with in the next exercise.
+<p>
+<img src="https://imgur.com/NkqoOME.png">
+</p>
+<br />
+<h2>Local DNS Cache Exercise</h2>
+</p>
