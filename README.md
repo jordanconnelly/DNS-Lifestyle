@@ -56,10 +56,22 @@ Go back to the Client-1 VM to ping "mainframe" again. Type "ping mainframe" in c
 <img src="https://imgur.com/lIHiaXZ.png">
 </p>
 <br />
-We can also take a look at the DNS Cache that the Client-1 VM currently knows, this is what we will be working with in the next exercise.
+We can also take a look at the local DNS Cache that the Client-1 VM currently knows, this is what we will be working with in the next exercise.
 <p>
 <img src="https://imgur.com/NkqoOME.png">
 </p>
 <br />
 <h2>Local DNS Cache Exercise</h2>
 </p>
+We will go back to the DC-1 VM and change the "mainframe" record address to 8.8.8.8 within the DNS Manager. Select "mainframe" to open the Properties and change the IP address from 10.0.0.4 to 8.8.8.8, click Apply.
+<p>
+<img src="https://imgur.com/YknyDsU.png">
+</p>
+<br />
+Minimize DC-1 and open Client-1. Open the Command Prompt again and type in "ping mainframe".
+<p>
+We will observe that the old IP Address (10.0.0.4) is presented, this is due to the Local DNS Cache. Since Client-1 has already interacted with "mainframe", the info associated with it is stored in the Local DNS Cache and does not reach out to the DNS Server for the answer. We can also type in (ipconfig /displaydns) to show the current DNS cache.
+<p>
+<img src="https://imgur.com/Ao16CQZ.png">
+</p>
+<br />
