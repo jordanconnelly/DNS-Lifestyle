@@ -75,3 +75,13 @@ We will observe that the old IP Address (10.0.0.4) is presented, this is due to 
 <img src="https://imgur.com/Ao16CQZ.png">
 </p>
 <br />
+In order to get the updated IP Address for "mainframe" we will flush the DNS Cache. Open the Command Prompt as an Administrator and type in (ipconfig /flushdns). All the DNS records from Client-1 will be wiped, forcing it to ask the DNS Server (DC-1) for the answers. We can double-check this by typing (ipconfig /displaydns) and observing the DNS Cache is now empty. 
+<p>
+<img src="https://imgur.com/G9SwxoY.png">
+</p>
+<br />
+Now we can type (ping mainframe) in Command Prompt again to observe the updated IP Address (8.8.8.8) that was received from the DNS Server (DC-1).
+<p>
+<img src="https://imgur.com/tP5tFs1.png">
+</p>
+<br />
