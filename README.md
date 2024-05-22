@@ -9,7 +9,7 @@ In this tutorial, we create and observe (A) and CNAME records. <br />
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
+- Microsoft Azure (Virtual Machines)
 - Remote Desktop
 - Various Command-Line Tools
 
